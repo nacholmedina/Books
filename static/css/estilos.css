@@ -1,0 +1,119 @@
+@import url(https://fonts.googleapis.com/css?family=Cabin+Condensed);
+@import url(//db.onlinewebfonts.com/c/2a0a86a0a696945db393e667ce1403b1?family=Plinc+Buffalo);
+@import url(https://allfont.es/allfont.css?fonts=special-elite);
+
+
+.imagennav{
+  max-height: 70px;
+
+}
+.cuerpo{
+  background-image: url(/static/images/backgroundimage.jpg.png);
+    background-size: 100%;
+  }
+.cancelbtn {
+    background-color: rgb(255, 186, 107) !important;
+  }
+.btn-success {
+  background-color: #c6e5b1 !important;
+  
+  
+}
+.tablalibros{
+  font-family: monospace;
+  border-radius: 10px;
+  margin: 50px auto;
+  background: linear-gradient(35deg, #f8e4db, #93d1cd);
+}
+
+h1{
+  font-family: 'Special Elite';
+}
+
+.mislibros {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  font-family: 'Special Elite';
+  text-justify: auto;
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+.textotachado{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  font-family: 'Special Elite';
+  text-justify: auto;
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; 
+  animation: 
+    typing 3.5s steps(40, end)
+}
+
+.tachado{
+  text-decoration-color: red;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  60% { border-color: orange; }
+  }
+
+.tablanuevo{
+  font-family: monospace;
+  font-weight: bold;
+  width: 20%;
+  height: 60%;
+  border-radius: 10px;
+  margin: 2% auto;
+  background: linear-gradient(85deg, #ccffff, #afb6f8);
+}
+
+
+
+
+.tablanuevo input{
+  align-content: center;
+  border-radius: 5px;
+  background: rgb(204, 247, 248);
+  
+}
+
+.editor{
+  font-family: monospace;
+  font-weight: bold;
+  width: 20%;
+  height: 60%;
+  border-radius: 10px;
+  margin: 2% auto;
+  background: linear-gradient(85deg, #ccffff, #afb6f8);
+}
+
+.sobrenos{
+  font-family: monospace;
+}
+
+.navegacion{
+  font-family: monospace;
+  height: 75px;
+  background-color:#93d1cd;
+}
+.nav-link{
+  background-color:#93d1cd;
+}
+
+footer{
+  font-family: monospace;
+  text-align: center;
+  background-color:#93d1cd;
+  height: 5%;
+}

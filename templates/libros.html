@@ -1,0 +1,48 @@
+
+
+{% extends "template.html" %}
+<title>
+    {% block title %} Libros📚 {% endblock %}
+</title>
+{% block content%}
+<div class="Todo mt-5 d-flex">
+<div class="col-md-2">
+</div>
+<div class="col-md-8 contenedor">
+    <div class="table-responsive">
+    <table class="table   tablalibros">  
+            <h1 class= "text-center col-md-3 d-none d-lg-block  mislibros ">Mis Libros</h1>
+        <thead>
+            <tr>
+            <th scope="col">Título</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Género</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            </tr>
+        </thead>
+        </tr>
+        {% for libro in libros %}
+        <tr>
+            <td>{{libro.titulo}}</td>
+            <td>{{libro.autor}}</td>
+            <td>{{libro.genero}}</td>
+            <td>
+            <button class="btn"><a href="{{url_for('editarLibro', libro_id = libro.id )}}"><i class="bi bi-pen-fill text-dark"></i></a></button>
+            </td>
+            <td>
+            <button class="btn"><a href="{{url_for('eliminarLibro', libro_id = libro.id )}}"><i class="bi bi-trash text-danger"></i></a></button>
+            </td>
+        </tr>
+        
+        {% endfor %}
+    </table>
+</div>
+</div>
+<div class="col-md-2">  
+</div>
+</div>
+<div class="text-center">
+<button class="btn btn-success text-center"><i class="bi bi-book-half text-dark"><a class="text-dark" href="{{url_for('nuevoLibro')}}"> Agregar un Libro</a></i></button>
+</td>
+{% endblock %}

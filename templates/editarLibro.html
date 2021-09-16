@@ -1,0 +1,22 @@
+{% extends "template.html" %}
+<title>
+    {% block title %} Libros📚 {% endblock %}
+</title>
+{% block content%}
+<form action="{{ url_for('editarLibro',libro_id = libro.id)}}" method="post">
+<div class="editor text-center p-4">
+    <div class="form-group d-inline-block text-justify">
+        <label for="nombre">Titulo:</label>
+        <input type="text" minlength="1" class="form-control" name="nombre" value="{{libro.titulo }}">
+        <label for="autor">Autor:</label>
+        <input type="text" minlength="1" class="form-control" name="autor" value="{{libro.autor }}">
+        <label for="genero">Genero:</label>
+        <input type="text" minlength="1" class="form-control" name="genero" value="{{libro.genero }}">
+        <button class="btn btn-success text-dark" type="submit"> Guardar</button>
+        <a href='{{ url_for("mostrarLibros") }}' type="button" class="btn cancelbtn">Cancelar</a>
+    </div>
+</div>
+</form>
+<br>
+<br>
+{% endblock %}

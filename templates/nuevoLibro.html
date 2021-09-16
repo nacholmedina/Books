@@ -1,0 +1,31 @@
+{% extends "template.html" %}
+<title>
+    {% block title %} Libros📚 {% endblock %}
+</title>
+{% block content%}
+
+<form  action="#" method="post">
+   <div class="form-group  d-block p-6 text-center col-xs-12">
+    <div class="text-center p-4">
+    <div class="container">
+    <div class="tablanuevo col-md-12">
+        <h1>Agregar un Libro</h1>
+        <div class="p-4">
+            <label for="nombre">Titulo: </label>
+            <input class="col-xs-2"  type="text" maxlength="100" minlength="1" name="nombre" placeholder="Nombre del Libro">
+        </div>
+        <div class="p-4">
+            <label for="autor">Autor: </label>
+            <input  class="col-xs-2"  maxlength="100" minlength="1" name="autor" placeholder="Autor del Libro">
+        </div>
+        <div class="p-4">
+            <label for="genero">Genero:</label>
+            <input  class="col-xs-2" maxlength="100" minlength="1" name="genero" placeholder="Genero del Libro">
+        </div>
+       <button class="btn btn-success text-dark m-4" type="submit">Guardar</button>
+       <a href='{{ url_for("mostrarLibros") }}' type="button" class="btn cancelbtn">Cancelar</a>
+    </div>
+  </div>
+</div>
+</form>
+{% endblock %}

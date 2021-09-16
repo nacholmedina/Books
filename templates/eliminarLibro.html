@@ -1,0 +1,22 @@
+{% extends "template.html" %}
+<title>
+    {% block title %} Eliminar Libro {% endblock %}
+</title>
+{% block content%}
+<div class="d-block">
+    <div class="col-md-3"></div>
+    <div class="text-center p-4">
+    <h2 class="textotachado mt-5"> Estás seguro que querés eliminar el libro <s class="tachado">{{libro.titulo}}?</s> </h2>
+    <form class="p4" action="#" method='post'>
+        <button class="btn btn-danger" type="submit"> Eliminar</button>
+        <a href='{{ url_for("mostrarLibros") }}' type="button" class="btn cancelbtn">Cancelar</a>
+    </form>
+</div>   
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}
